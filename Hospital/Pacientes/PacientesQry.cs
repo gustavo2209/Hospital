@@ -35,7 +35,7 @@ namespace Hospital.Pacientes
         public void consulta()
         {
             SqlDataAdapter da = new SqlDataAdapter("SELECT idpaciente AS 'CODIGO DEL PACIENTE', nombre AS 'APELLIDOS Y NOMBRES', nacimiento AS 'FECHA DE NACIMIENTO' " +
-                "FROM pacientes ORDER BY idpaciente ASC", form1.cn);
+                "FROM pacientes ORDER BY nombre ASC", form1.cn);
             DataSet ds = new DataSet();
             da.Fill(ds);
 

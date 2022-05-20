@@ -82,5 +82,13 @@ namespace Hospital
                 MessageBox.Show("Para retirar active el formulario de CONSULTAS DE PACIENTES");
             }
         }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PacientesUpd pacientesUpd = new PacientesUpd(this, pacientesQry);
+
+            pacientesUpd.MdiParent = this;
+            pacientesUpd.Show();
+        }
     }
 }
