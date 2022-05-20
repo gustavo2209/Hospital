@@ -35,24 +35,24 @@ namespace Hospital
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.especialidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.médicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.citasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.retirarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.especialidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.nuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.retirarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.médicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.nuevoToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.retirarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.citasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.nuevoToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,8 +83,9 @@ namespace Hospital
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
@@ -109,6 +110,38 @@ namespace Hospital
             this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            this.consultaToolStripMenuItem.Click += new System.EventHandler(this.consultaToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // nuevoToolStripMenuItem
+            // 
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem.Text = "Nuevo";
+            this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
+            // 
+            // actualizarToolStripMenuItem
+            // 
+            this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
+            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.actualizarToolStripMenuItem.Text = "Actualizar";
+            // 
+            // retirarToolStripMenuItem
+            // 
+            this.retirarToolStripMenuItem.Name = "retirarToolStripMenuItem";
+            this.retirarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.retirarToolStripMenuItem.Text = "Retirar";
+            this.retirarToolStripMenuItem.Click += new System.EventHandler(this.retirarToolStripMenuItem_Click);
+            // 
             // especialidadesToolStripMenuItem
             // 
             this.especialidadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -120,6 +153,35 @@ namespace Hospital
             this.especialidadesToolStripMenuItem.Name = "especialidadesToolStripMenuItem";
             this.especialidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.especialidadesToolStripMenuItem.Text = "Especialidades";
+            // 
+            // consultaToolStripMenuItem1
+            // 
+            this.consultaToolStripMenuItem1.Name = "consultaToolStripMenuItem1";
+            this.consultaToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.consultaToolStripMenuItem1.Text = "Consulta";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(123, 6);
+            // 
+            // nuevoToolStripMenuItem1
+            // 
+            this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
+            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.nuevoToolStripMenuItem1.Text = "Nuevo";
+            // 
+            // actualizarToolStripMenuItem1
+            // 
+            this.actualizarToolStripMenuItem1.Name = "actualizarToolStripMenuItem1";
+            this.actualizarToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.actualizarToolStripMenuItem1.Text = "Actualizar";
+            // 
+            // retirarToolStripMenuItem1
+            // 
+            this.retirarToolStripMenuItem1.Name = "retirarToolStripMenuItem1";
+            this.retirarToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
+            this.retirarToolStripMenuItem1.Text = "Retirar";
             // 
             // médicosToolStripMenuItem
             // 
@@ -133,6 +195,35 @@ namespace Hospital
             this.médicosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.médicosToolStripMenuItem.Text = "Médicos";
             // 
+            // consultaToolStripMenuItem2
+            // 
+            this.consultaToolStripMenuItem2.Name = "consultaToolStripMenuItem2";
+            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.consultaToolStripMenuItem2.Text = "Consulta";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(123, 6);
+            // 
+            // nuevoToolStripMenuItem2
+            // 
+            this.nuevoToolStripMenuItem2.Name = "nuevoToolStripMenuItem2";
+            this.nuevoToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.nuevoToolStripMenuItem2.Text = "Nuevo";
+            // 
+            // actualizarToolStripMenuItem2
+            // 
+            this.actualizarToolStripMenuItem2.Name = "actualizarToolStripMenuItem2";
+            this.actualizarToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.actualizarToolStripMenuItem2.Text = "Actualizar";
+            // 
+            // retirarToolStripMenuItem2
+            // 
+            this.retirarToolStripMenuItem2.Name = "retirarToolStripMenuItem2";
+            this.retirarToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.retirarToolStripMenuItem2.Text = "Retirar";
+            // 
             // citasToolStripMenuItem
             // 
             this.citasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -145,120 +236,33 @@ namespace Hospital
             this.citasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.citasToolStripMenuItem.Text = "Citas";
             // 
-            // consultaToolStripMenuItem
-            // 
-            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultaToolStripMenuItem.Text = "Consulta";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // nuevoToolStripMenuItem
-            // 
-            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nuevoToolStripMenuItem.Text = "Nuevo";
-            // 
-            // actualizarToolStripMenuItem
-            // 
-            this.actualizarToolStripMenuItem.Name = "actualizarToolStripMenuItem";
-            this.actualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.actualizarToolStripMenuItem.Text = "Actualizar";
-            // 
-            // retirarToolStripMenuItem
-            // 
-            this.retirarToolStripMenuItem.Name = "retirarToolStripMenuItem";
-            this.retirarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.retirarToolStripMenuItem.Text = "Retirar";
-            // 
-            // consultaToolStripMenuItem1
-            // 
-            this.consultaToolStripMenuItem1.Name = "consultaToolStripMenuItem1";
-            this.consultaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.consultaToolStripMenuItem1.Text = "Consulta";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
-            // 
-            // nuevoToolStripMenuItem1
-            // 
-            this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.nuevoToolStripMenuItem1.Text = "Nuevo";
-            // 
-            // actualizarToolStripMenuItem1
-            // 
-            this.actualizarToolStripMenuItem1.Name = "actualizarToolStripMenuItem1";
-            this.actualizarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.actualizarToolStripMenuItem1.Text = "Actualizar";
-            // 
-            // retirarToolStripMenuItem1
-            // 
-            this.retirarToolStripMenuItem1.Name = "retirarToolStripMenuItem1";
-            this.retirarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.retirarToolStripMenuItem1.Text = "Retirar";
-            // 
-            // consultaToolStripMenuItem2
-            // 
-            this.consultaToolStripMenuItem2.Name = "consultaToolStripMenuItem2";
-            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.consultaToolStripMenuItem2.Text = "Consulta";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
-            // 
-            // nuevoToolStripMenuItem2
-            // 
-            this.nuevoToolStripMenuItem2.Name = "nuevoToolStripMenuItem2";
-            this.nuevoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.nuevoToolStripMenuItem2.Text = "Nuevo";
-            // 
-            // actualizarToolStripMenuItem2
-            // 
-            this.actualizarToolStripMenuItem2.Name = "actualizarToolStripMenuItem2";
-            this.actualizarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.actualizarToolStripMenuItem2.Text = "Actualizar";
-            // 
-            // retirarToolStripMenuItem2
-            // 
-            this.retirarToolStripMenuItem2.Name = "retirarToolStripMenuItem2";
-            this.retirarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
-            this.retirarToolStripMenuItem2.Text = "Retirar";
-            // 
             // consultaToolStripMenuItem3
             // 
             this.consultaToolStripMenuItem3.Name = "consultaToolStripMenuItem3";
-            this.consultaToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
             this.consultaToolStripMenuItem3.Text = "Consulta";
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(123, 6);
             // 
             // nuevoToolStripMenuItem3
             // 
             this.nuevoToolStripMenuItem3.Name = "nuevoToolStripMenuItem3";
-            this.nuevoToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
             this.nuevoToolStripMenuItem3.Text = "Nuevo";
             // 
             // actualizarToolStripMenuItem3
             // 
             this.actualizarToolStripMenuItem3.Name = "actualizarToolStripMenuItem3";
-            this.actualizarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.actualizarToolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
             this.actualizarToolStripMenuItem3.Text = "Actualizar";
             // 
             // retirarToolStripMenuItem3
             // 
             this.retirarToolStripMenuItem3.Name = "retirarToolStripMenuItem3";
-            this.retirarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.retirarToolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
             this.retirarToolStripMenuItem3.Text = "Retirar";
             // 
             // Form1
@@ -271,8 +275,11 @@ namespace Hospital
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Citas";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
