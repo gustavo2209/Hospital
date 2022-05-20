@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using System.Data.SqlClient;
 using Hospital.Pacientes;
+using Hospital.Especialidades;
 
 namespace Hospital
 {
@@ -18,6 +19,8 @@ namespace Hospital
 
         public SqlConnection cn;
         private PacientesQry pacientesQry;
+        private EspecialidadesQry especialidadesQry;
+        
         //private NotasQry notasQry;
 
         public Form1()
@@ -89,6 +92,66 @@ namespace Hospital
 
             pacientesUpd.MdiParent = this;
             pacientesUpd.Show();
+        }
+
+        private void consultaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(EspecialidadesQry))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            especialidadesQry = new EspecialidadesQry(this);
+            especialidadesQry.MdiParent = this;
+            especialidadesQry.Show();
+            especialidadesQry.BringToFront();
+        }
+
+        private void nuevoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EspecialidadesIns especialidadesIns = new EspecialidadesIns(this, especialidadesQry);
+
+            especialidadesIns.MdiParent = this;
+            especialidadesIns.Show();
+        }
+
+        private void retirarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            bool msg = false;
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(EspecialidadesQry))
+                {
+                    especialidadesQry = (EspecialidadesQry)form;
+                    especialidadesQry.Activate();
+                    especialidadesQry.RetirarFila();
+
+                    msg = false;
+                    break;
+                }
+                else
+                {
+                    msg = true;
+                }
+            }
+
+            if (msg)
+            {
+                MessageBox.Show("Para retirar active el formulario de CONSULTAS DE ESPECIALIDADES");
+            }
+        }
+
+        private void actualizarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            EspecialidadesUpd especialidadesUpd = new EspecialidadesUpd(this, especialidadesQry);
+
+            especialidadesUpd.MdiParent = this;
+            especialidadesUpd.Show();
         }
     }
 }

@@ -31,10 +31,10 @@ namespace Hospital.Pacientes
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PacientesIns));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtApeNomPaciente = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtApeNomPaciente = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnGrabar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,21 +54,12 @@ namespace Hospital.Pacientes
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Paciente";
             // 
-            // label1
+            // dtpFechaNac
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Apellidos y Nombres:";
-            // 
-            // txtApeNomPaciente
-            // 
-            this.txtApeNomPaciente.Location = new System.Drawing.Point(166, 34);
-            this.txtApeNomPaciente.Name = "txtApeNomPaciente";
-            this.txtApeNomPaciente.Size = new System.Drawing.Size(280, 22);
-            this.txtApeNomPaciente.TabIndex = 1;
+            this.dtpFechaNac.Location = new System.Drawing.Point(166, 76);
+            this.dtpFechaNac.Name = "dtpFechaNac";
+            this.dtpFechaNac.Size = new System.Drawing.Size(280, 22);
+            this.dtpFechaNac.TabIndex = 3;
             // 
             // label2
             // 
@@ -79,12 +70,21 @@ namespace Hospital.Pacientes
             this.label2.TabIndex = 2;
             this.label2.Text = "Fecha de Nacimiento:";
             // 
-            // dtpFechaNac
+            // txtApeNomPaciente
             // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(166, 76);
-            this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(280, 22);
-            this.dtpFechaNac.TabIndex = 3;
+            this.txtApeNomPaciente.Location = new System.Drawing.Point(166, 34);
+            this.txtApeNomPaciente.Name = "txtApeNomPaciente";
+            this.txtApeNomPaciente.Size = new System.Drawing.Size(280, 22);
+            this.txtApeNomPaciente.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Apellidos y Nombres:";
             // 
             // btnGrabar
             // 
@@ -108,6 +108,7 @@ namespace Hospital.Pacientes
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "PacientesIns";
             this.Text = "Registro Nuevo Paciente";
             this.Load += new System.EventHandler(this.PacientesIns_Load);

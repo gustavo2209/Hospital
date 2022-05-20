@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Especialidades\EspecialidadesIns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidades\EspecialidadesIns.Designer.cs">
+      <DependentUpon>EspecialidadesIns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Especialidades\EspecialidadesQry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidades\EspecialidadesQry.Designer.cs">
+      <DependentUpon>EspecialidadesQry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Especialidades\EspecialidadesUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidades\EspecialidadesUpd.Designer.cs">
+      <DependentUpon>EspecialidadesUpd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +90,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Especialidades\EspecialidadesIns.resx">
+      <DependentUpon>EspecialidadesIns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Especialidades\EspecialidadesQry.resx">
+      <DependentUpon>EspecialidadesQry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Especialidades\EspecialidadesUpd.resx">
+      <DependentUpon>EspecialidadesUpd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,5 +137,6 @@
   <ItemGroup>
     <None Include="Resources\back13.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
