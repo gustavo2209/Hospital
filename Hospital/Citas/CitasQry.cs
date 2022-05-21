@@ -47,5 +47,36 @@ namespace Hospital.Citas
             dgvListaCitas.DataSource = ds.Tables[0];
 
         }
+
+        public void RetirarFila()
+        {
+            DataGridViewSelectedRowCollection selectedRowCollection = dgvListaCitas.SelectedRows;
+
+            if (selectedRowCollection.Count > 0)
+            {
+                var confirmResult = MessageBox.Show("¿Está seguro de retirar este registro?", "Confirmar Retiro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    int idcita = Convert.ToInt32(dgvListaCitas.SelectedRows[0].Cells[0].Value.ToString());
+
+                    SqlCommand cm = new SqlCommand();
+
+                    cm.Connection = form1.cn;
+                    cm.CommandText = "DELETE FROM citas WHERE idcita = " + idcita;
+                    form1.cn.Open();
+                    cm.ExecuteNonQuery();
+                    form1.cn.Close();
+
+                    MessageBox.Show("Datos eliminados correctamente", "MENSAJE DE CONFIRMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    consulta();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione fila a retirar");
+            }
+        }
     }
 }

@@ -237,5 +237,40 @@ namespace Hospital
             citasQry.Show();
             citasQry.BringToFront();
         }
+
+        private void nuevoToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            CitasIns citasIns = new CitasIns(this, citasQry);
+
+            citasIns.MdiParent = this;
+            citasIns.Show();
+        }
+
+        private void retirarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            bool msg = false;
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(CitasQry))
+                {
+                    citasQry = (CitasQry)form;
+                    citasQry.Activate();
+                    citasQry.RetirarFila();
+
+                    msg = false;
+                    break;
+                }
+                else
+                {
+                    msg = true;
+                }
+            }
+
+            if (msg)
+            {
+                MessageBox.Show("Para retirar active el formulario de CONSULTAS DE MÉDICOS");
+            }
+        }
     }
 }

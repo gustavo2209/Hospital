@@ -264,6 +264,7 @@ namespace Hospital
             this.nuevoToolStripMenuItem3.Name = "nuevoToolStripMenuItem3";
             this.nuevoToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.nuevoToolStripMenuItem3.Text = "Nuevo";
+            this.nuevoToolStripMenuItem3.Click += new System.EventHandler(this.nuevoToolStripMenuItem3_Click);
             // 
             // actualizarToolStripMenuItem3
             // 
@@ -276,6 +277,7 @@ namespace Hospital
             this.retirarToolStripMenuItem3.Name = "retirarToolStripMenuItem3";
             this.retirarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.retirarToolStripMenuItem3.Text = "Retirar";
+            this.retirarToolStripMenuItem3.Click += new System.EventHandler(this.retirarToolStripMenuItem3_Click);
             // 
             // reportesToolStripMenuItem
             // 
