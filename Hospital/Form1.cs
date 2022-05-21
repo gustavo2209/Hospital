@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using Hospital.Pacientes;
 using Hospital.Especialidades;
+using Hospital.Medicos;
 
 namespace Hospital
 {
@@ -20,8 +21,7 @@ namespace Hospital
         public SqlConnection cn;
         private PacientesQry pacientesQry;
         private EspecialidadesQry especialidadesQry;
-        
-        //private NotasQry notasQry;
+        private MedicosQry medicosQry;
 
         public Form1()
         {
@@ -152,6 +152,28 @@ namespace Hospital
 
             especialidadesUpd.MdiParent = this;
             especialidadesUpd.Show();
+        }
+
+        private void consultaToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(MedicosQry))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            medicosQry = new MedicosQry(this);
+            medicosQry.MdiParent = this;
+            medicosQry.Show();
+            medicosQry.BringToFront();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
