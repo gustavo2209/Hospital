@@ -109,7 +109,7 @@ namespace Hospital
             this.actualizarToolStripMenuItem,
             this.retirarToolStripMenuItem});
             this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             // 
             // consultaToolStripMenuItem
@@ -154,7 +154,7 @@ namespace Hospital
             this.actualizarToolStripMenuItem1,
             this.retirarToolStripMenuItem1});
             this.especialidadesToolStripMenuItem.Name = "especialidadesToolStripMenuItem";
-            this.especialidadesToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.especialidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.especialidadesToolStripMenuItem.Text = "Especialidades";
             // 
             // consultaToolStripMenuItem1
@@ -199,38 +199,41 @@ namespace Hospital
             this.actualizarToolStripMenuItem2,
             this.retirarToolStripMenuItem2});
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
-            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.médicosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.médicosToolStripMenuItem.Text = "Médicos";
             // 
             // consultaToolStripMenuItem2
             // 
             this.consultaToolStripMenuItem2.Name = "consultaToolStripMenuItem2";
-            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.consultaToolStripMenuItem2.Text = "Consulta";
             this.consultaToolStripMenuItem2.Click += new System.EventHandler(this.consultaToolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(123, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
             // 
             // nuevoToolStripMenuItem2
             // 
             this.nuevoToolStripMenuItem2.Name = "nuevoToolStripMenuItem2";
-            this.nuevoToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.nuevoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.nuevoToolStripMenuItem2.Text = "Nuevo";
+            this.nuevoToolStripMenuItem2.Click += new System.EventHandler(this.nuevoToolStripMenuItem2_Click);
             // 
             // actualizarToolStripMenuItem2
             // 
             this.actualizarToolStripMenuItem2.Name = "actualizarToolStripMenuItem2";
-            this.actualizarToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.actualizarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.actualizarToolStripMenuItem2.Text = "Actualizar";
+            this.actualizarToolStripMenuItem2.Click += new System.EventHandler(this.actualizarToolStripMenuItem2_Click);
             // 
             // retirarToolStripMenuItem2
             // 
             this.retirarToolStripMenuItem2.Name = "retirarToolStripMenuItem2";
-            this.retirarToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
+            this.retirarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
             this.retirarToolStripMenuItem2.Text = "Retirar";
+            this.retirarToolStripMenuItem2.Click += new System.EventHandler(this.retirarToolStripMenuItem2_Click);
             // 
             // citasToolStripMenuItem
             // 
@@ -241,7 +244,7 @@ namespace Hospital
             this.actualizarToolStripMenuItem3,
             this.retirarToolStripMenuItem3});
             this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.citasToolStripMenuItem.Text = "Citas";
             // 
             // consultaToolStripMenuItem3

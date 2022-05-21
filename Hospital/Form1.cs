@@ -175,5 +175,48 @@ namespace Hospital
         {
 
         }
+
+        private void nuevoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            MedicosIns medicosIns = new MedicosIns(this, medicosQry);
+
+            medicosIns.MdiParent = this;
+            medicosIns.Show();
+        }
+
+        private void retirarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            bool msg = false;
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(MedicosQry))
+                {
+                    medicosQry = (MedicosQry)form;
+                    medicosQry.Activate();
+                    medicosQry.RetirarFila();
+
+                    msg = false;
+                    break;
+                }
+                else
+                {
+                    msg = true;
+                }
+            }
+
+            if (msg)
+            {
+                MessageBox.Show("Para retirar active el formulario de CONSULTAS DE MÉDICOS");
+            }
+        }
+
+        private void actualizarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            MedicosUpd medicosUpd = new MedicosUpd(this, medicosQry);
+
+            medicosUpd.MdiParent = this;
+            medicosUpd.Show();
+        }
     }
 }

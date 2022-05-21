@@ -42,5 +42,36 @@ namespace Hospital.Medicos
 
             dgvListaMedicos.DataSource = ds.Tables[0];
         }
+
+        public void RetirarFila()
+        {
+            DataGridViewSelectedRowCollection selectedRowCollection = dgvListaMedicos.SelectedRows;
+
+            if (selectedRowCollection.Count > 0)
+            {
+                var confirmResult = MessageBox.Show("¿Está seguro de retirar este registro?", "Confirmar Retiro", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (confirmResult == DialogResult.Yes)
+                {
+                    int idmedico = Convert.ToInt32(dgvListaMedicos.SelectedRows[0].Cells[0].Value.ToString());
+
+                    SqlCommand cm = new SqlCommand();
+
+                    cm.Connection = form1.cn;
+                    cm.CommandText = "DELETE FROM medicos WHERE idmedico = " + idmedico;
+                    form1.cn.Open();
+                    cm.ExecuteNonQuery();
+                    form1.cn.Close();
+
+                    MessageBox.Show("Datos eliminados correctamente", "MENSAJE DE CONFIRMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    consulta();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione fila a retirar");
+            }
+        }
     }
 }

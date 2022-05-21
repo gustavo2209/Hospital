@@ -10,49 +10,51 @@ using System.Windows.Forms;
 
 using System.Data.SqlClient;
 
-namespace Hospital.Pacientes
+namespace Hospital.Medicos
 {
-    public partial class PacientesIns : Form
+    public partial class MedicosIns : Form
     {
 
         private Form1 form1;
-        private PacientesQry pacientesQry;
+        private MedicosQry medicosQry;
 
-        public PacientesIns()
+        public MedicosIns()
         {
             InitializeComponent();
-            txtApeNomPaciente.Focus();
+            txtApeNomMedico.Focus();
         }
 
-        public PacientesIns(Form1 form1, PacientesQry pacientesQry)
+        public MedicosIns(Form1 form1, MedicosQry medicosQry)
         {
             InitializeComponent();
             this.form1 = form1;
-            this.pacientesQry = pacientesQry;
+            this.medicosQry = medicosQry;
         }
 
-        private void PacientesIns_Load(object sender, EventArgs e)
+        private void MedicosIns_Load(object sender, EventArgs e)
         {
-            dtpFechaNac.CustomFormat = "dd/MM/yyyy";
-            dtpFechaNac.Format = DateTimePickerFormat.Custom;
+            SqlDataAdapter da = new SqlDataAdapter("SELECT idespecialidad, especialidad FROM especialidades", form1.cn);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            cboEspeMedico.DataSource = ds.Tables[0];
+            cboEspeMedico.ValueMember = "idespecialidad";
+            cboEspeMedico.DisplayMember = "especialidad";
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if(txtApeNomPaciente.Text.Trim().Length > 0)
+            if (txtApeNomMedico.Text.Trim().Length > 0)
             {
 
                 var confirmResult = MessageBox.Show("¿Está seguro de grabar este registro?", "CONFIRMAR GRABACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (confirmResult == DialogResult.Yes)
                 {
-                    DateTime dt1 = dtpFechaNac.Value;
-
-                    string s1 = dt1.Day + "-" + dt1.Month + "-" + dt1.Year;
 
                     SqlCommand cm = new SqlCommand();
                     cm.Connection = form1.cn;
-                    cm.CommandText = "set dateformat 'dmy' INSERT INTO pacientes VALUES('" + txtApeNomPaciente.Text + "', '" + s1 + "')";
+                    cm.CommandText = "INSERT INTO medicos VALUES(" + cboEspeMedico.SelectedValue + ", '" + txtApeNomMedico.Text + "')";
                     //MessageBox.Show(cm.CommandText); // PARA SABER LOS POSIBLES ERRORES AL HACER LA CONSULTA
                     form1.cn.Open();
                     cm.ExecuteNonQuery();
@@ -62,9 +64,9 @@ namespace Hospital.Pacientes
 
                     foreach (Form form in Application.OpenForms)
                     {
-                        if (form.GetType() == typeof(PacientesQry))
+                        if (form.GetType() == typeof(MedicosQry))
                         {
-                            ((PacientesQry)form).consulta();
+                            ((MedicosQry)form).consulta();
                             form.Activate();
                             form.BringToFront();
                         }
@@ -75,14 +77,9 @@ namespace Hospital.Pacientes
             }
             else
             {
-                MessageBox.Show("Digite nombres y apellidos del paciente", "MENSAJE DE ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtApeNomPaciente.Focus();
+                MessageBox.Show("Digite nombres y apellidos del médico", "MENSAJE DE ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtApeNomMedico.Focus();
             }
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

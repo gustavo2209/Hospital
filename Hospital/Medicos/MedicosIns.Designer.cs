@@ -1,7 +1,7 @@
 ﻿
-namespace Hospital.Pacientes
+namespace Hospital.Medicos
 {
-    partial class PacientesIns
+    partial class MedicosIns
     {
         /// <summary>
         /// Required designer variable.
@@ -29,54 +29,58 @@ namespace Hospital.Pacientes
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PacientesIns));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtApeNomPaciente = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicosIns));
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtApeNomMedico = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboEspeMedico = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // btnGrabar
+            // 
+            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGrabar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrabar.Location = new System.Drawing.Point(81, 151);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(330, 30);
+            this.btnGrabar.TabIndex = 3;
+            this.btnGrabar.Text = "Grabar Datos";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.dtpFechaNac);
+            this.groupBox1.Controls.Add(this.cboEspeMedico);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtApeNomPaciente);
+            this.groupBox1.Controls.Add(this.txtApeNomMedico);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(15, 16);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(479, 120);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos del Paciente";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // dtpFechaNac
-            // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(166, 76);
-            this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(280, 22);
-            this.dtpFechaNac.TabIndex = 3;
+            this.groupBox1.Text = "Datos del Médico";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(25, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 16);
+            this.label2.Size = new System.Drawing.Size(79, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Fecha de Nacimiento:";
+            this.label2.Text = "Especialidad:";
             // 
-            // txtApeNomPaciente
+            // txtApeNomMedico
             // 
-            this.txtApeNomPaciente.Location = new System.Drawing.Point(166, 34);
-            this.txtApeNomPaciente.Name = "txtApeNomPaciente";
-            this.txtApeNomPaciente.Size = new System.Drawing.Size(280, 22);
-            this.txtApeNomPaciente.TabIndex = 1;
+            this.txtApeNomMedico.Location = new System.Drawing.Point(166, 34);
+            this.txtApeNomMedico.Name = "txtApeNomMedico";
+            this.txtApeNomMedico.Size = new System.Drawing.Size(280, 22);
+            this.txtApeNomMedico.TabIndex = 1;
             // 
             // label1
             // 
@@ -87,32 +91,29 @@ namespace Hospital.Pacientes
             this.label1.TabIndex = 0;
             this.label1.Text = "Apellidos y Nombres:";
             // 
-            // btnGrabar
+            // cboEspeMedico
             // 
-            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGrabar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(78, 147);
-            this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(330, 30);
-            this.btnGrabar.TabIndex = 1;
-            this.btnGrabar.Text = "Grabar Datos";
-            this.btnGrabar.UseVisualStyleBackColor = true;
-            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
+            this.cboEspeMedico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEspeMedico.FormattingEnabled = true;
+            this.cboEspeMedico.Location = new System.Drawing.Point(166, 78);
+            this.cboEspeMedico.Name = "cboEspeMedico";
+            this.cboEspeMedico.Size = new System.Drawing.Size(280, 24);
+            this.cboEspeMedico.TabIndex = 3;
             // 
-            // PacientesIns
+            // MedicosIns
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.BackgroundImage = global::Hospital.Properties.Resources.back13;
-            this.ClientSize = new System.Drawing.Size(507, 192);
+            this.ClientSize = new System.Drawing.Size(510, 200);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "PacientesIns";
-            this.Text = "Registro Nuevo Paciente";
-            this.Load += new System.EventHandler(this.PacientesIns_Load);
+            this.Name = "MedicosIns";
+            this.Text = "Registro Nuevo Médico";
+            this.Load += new System.EventHandler(this.MedicosIns_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -121,11 +122,11 @@ namespace Hospital.Pacientes
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dtpFechaNac;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtApeNomPaciente;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cboEspeMedico;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtApeNomMedico;
+        private System.Windows.Forms.Label label1;
     }
 }
