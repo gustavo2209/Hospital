@@ -205,33 +205,33 @@ namespace Hospital
             // consultaToolStripMenuItem2
             // 
             this.consultaToolStripMenuItem2.Name = "consultaToolStripMenuItem2";
-            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
             this.consultaToolStripMenuItem2.Text = "Consulta";
             this.consultaToolStripMenuItem2.Click += new System.EventHandler(this.consultaToolStripMenuItem2_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(123, 6);
             // 
             // nuevoToolStripMenuItem2
             // 
             this.nuevoToolStripMenuItem2.Name = "nuevoToolStripMenuItem2";
-            this.nuevoToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.nuevoToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
             this.nuevoToolStripMenuItem2.Text = "Nuevo";
             this.nuevoToolStripMenuItem2.Click += new System.EventHandler(this.nuevoToolStripMenuItem2_Click);
             // 
             // actualizarToolStripMenuItem2
             // 
             this.actualizarToolStripMenuItem2.Name = "actualizarToolStripMenuItem2";
-            this.actualizarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.actualizarToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
             this.actualizarToolStripMenuItem2.Text = "Actualizar";
             this.actualizarToolStripMenuItem2.Click += new System.EventHandler(this.actualizarToolStripMenuItem2_Click);
             // 
             // retirarToolStripMenuItem2
             // 
             this.retirarToolStripMenuItem2.Name = "retirarToolStripMenuItem2";
-            this.retirarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.retirarToolStripMenuItem2.Size = new System.Drawing.Size(126, 22);
             this.retirarToolStripMenuItem2.Text = "Retirar";
             this.retirarToolStripMenuItem2.Click += new System.EventHandler(this.retirarToolStripMenuItem2_Click);
             // 
@@ -250,30 +250,31 @@ namespace Hospital
             // consultaToolStripMenuItem3
             // 
             this.consultaToolStripMenuItem3.Name = "consultaToolStripMenuItem3";
-            this.consultaToolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
+            this.consultaToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.consultaToolStripMenuItem3.Text = "Consulta";
+            this.consultaToolStripMenuItem3.Click += new System.EventHandler(this.consultaToolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(123, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(177, 6);
             // 
             // nuevoToolStripMenuItem3
             // 
             this.nuevoToolStripMenuItem3.Name = "nuevoToolStripMenuItem3";
-            this.nuevoToolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
+            this.nuevoToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.nuevoToolStripMenuItem3.Text = "Nuevo";
             // 
             // actualizarToolStripMenuItem3
             // 
             this.actualizarToolStripMenuItem3.Name = "actualizarToolStripMenuItem3";
-            this.actualizarToolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
+            this.actualizarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.actualizarToolStripMenuItem3.Text = "Actualizar";
             // 
             // retirarToolStripMenuItem3
             // 
             this.retirarToolStripMenuItem3.Name = "retirarToolStripMenuItem3";
-            this.retirarToolStripMenuItem3.Size = new System.Drawing.Size(126, 22);
+            this.retirarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.retirarToolStripMenuItem3.Text = "Retirar";
             // 
             // reportesToolStripMenuItem

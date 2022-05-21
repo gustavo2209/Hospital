@@ -81,8 +81,8 @@ namespace Hospital.Medicos
                     SqlCommand cm = new SqlCommand();
 
                     cm.Connection = form1.cn;
-                    cm.CommandText = "UPDATE medicos SET idespecialidad = " + cboUpdEspeMedico.SelectedIndex + ", nombre = '" + txtUpdApeNomMedico.Text + "' WHERE idmedico = " + cboMedico.SelectedValue;
-                    MessageBox.Show(cm.CommandText); //PARA SABER LOS POSIBLES ERRORES AL HACER LA CONSULTA
+                    cm.CommandText = "UPDATE medicos SET idespecialidad = " + cboUpdEspeMedico.SelectedValue + ", nombre = '" + txtUpdApeNomMedico.Text + "' WHERE idmedico = " + cboMedico.SelectedValue;
+                    //MessageBox.Show(cm.CommandText); //PARA SABER LOS POSIBLES ERRORES AL HACER LA CONSULTA
                     form1.cn.Open();
                     cm.ExecuteNonQuery();
                     form1.cn.Close();
