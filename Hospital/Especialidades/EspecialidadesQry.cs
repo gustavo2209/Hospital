@@ -41,6 +41,9 @@ namespace Hospital.Especialidades
             da.Fill(ds);
 
             dgvListaEspecialidades.DataSource = ds.Tables[0];
+
+            dgvListaEspecialidades.Columns[0].Width = 100;
+            dgvListaEspecialidades.Columns[1].Width = 400;
         }
 
         public void RetirarFila()

@@ -24,7 +24,7 @@ namespace Hospital.Pacientes
         public PacientesQry(Form1 form1)
         {
             InitializeComponent();
-            this.form1 = form1;
+            this.form1 = form1; 
         }
 
         private void PacientesQry_Load(object sender, EventArgs e)
@@ -40,6 +40,10 @@ namespace Hospital.Pacientes
             da.Fill(ds);
 
             dgvListaPacientes.DataSource = ds.Tables[0];
+
+            dgvListaPacientes.Columns[0].Width = 100;
+            dgvListaPacientes.Columns[1].Width = 200;
+            dgvListaPacientes.Columns[2].Width = 120;
         }
 
         public void RetirarFila()

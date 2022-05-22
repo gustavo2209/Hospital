@@ -84,14 +84,14 @@ namespace Hospital.Especialidades
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvListaEspecialidades.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListaEspecialidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaEspecialidades.Size = new System.Drawing.Size(800, 450);
+            this.dgvListaEspecialidades.Size = new System.Drawing.Size(523, 281);
             this.dgvListaEspecialidades.TabIndex = 1;
             // 
             // EspecialidadesQry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(523, 281);
             this.Controls.Add(this.dgvListaEspecialidades);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
