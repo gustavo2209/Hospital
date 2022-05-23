@@ -272,5 +272,13 @@ namespace Hospital
                 MessageBox.Show("Para retirar active el formulario de CONSULTAS DE MÉDICOS");
             }
         }
+
+        private void actualizarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            CitasUpd citasUpd = new CitasUpd(this, citasQry);
+
+            citasUpd.MdiParent = this;
+            citasUpd.Show();
+        }
     }
 }

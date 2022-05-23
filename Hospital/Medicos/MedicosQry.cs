@@ -43,8 +43,8 @@ namespace Hospital.Medicos
             dgvListaMedicos.DataSource = ds.Tables[0];
 
             dgvListaMedicos.Columns[0].Width = 100;
-            dgvListaMedicos.Columns[1].Width = 300;
-            dgvListaMedicos.Columns[2].Width = 200;
+            dgvListaMedicos.Columns[1].Width = 200;
+            dgvListaMedicos.Columns[2].Width = 350;
         }
 
         public void RetirarFila()

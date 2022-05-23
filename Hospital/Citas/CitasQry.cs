@@ -46,6 +46,12 @@ namespace Hospital.Citas
 
             dgvListaCitas.DataSource = ds.Tables[0];
 
+            dgvListaCitas.Columns[0].Width = 100;
+            dgvListaCitas.Columns[1].Width = 250;
+            dgvListaCitas.Columns[2].Width = 250;
+            dgvListaCitas.Columns[3].Width = 200;
+            dgvListaCitas.Columns[4].Width = 180;
+
         }
 
         public void RetirarFila()

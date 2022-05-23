@@ -58,6 +58,12 @@
     <Compile Include="Citas\CitasQry.Designer.cs">
       <DependentUpon>CitasQry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Citas\CitasUpd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citas\CitasUpd.Designer.cs">
+      <DependentUpon>CitasUpd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Especialidades\EspecialidadesIns.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Citas\CitasQry.resx">
       <DependentUpon>CitasQry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Citas\CitasUpd.resx">
+      <DependentUpon>CitasUpd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Especialidades\EspecialidadesIns.resx">
       <DependentUpon>EspecialidadesIns.cs</DependentUpon>

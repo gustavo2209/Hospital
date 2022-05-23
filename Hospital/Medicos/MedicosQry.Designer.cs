@@ -84,7 +84,7 @@ namespace Hospital.Medicos
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvListaMedicos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvListaMedicos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaMedicos.Size = new System.Drawing.Size(800, 450);
+            this.dgvListaMedicos.Size = new System.Drawing.Size(857, 450);
             this.dgvListaMedicos.TabIndex = 2;
             // 
             // MedicosQry
@@ -92,7 +92,7 @@ namespace Hospital.Medicos
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Hospital.Properties.Resources.back13;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(857, 450);
             this.Controls.Add(this.dgvListaMedicos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -271,6 +271,7 @@ namespace Hospital
             this.actualizarToolStripMenuItem3.Name = "actualizarToolStripMenuItem3";
             this.actualizarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.actualizarToolStripMenuItem3.Text = "Actualizar";
+            this.actualizarToolStripMenuItem3.Click += new System.EventHandler(this.actualizarToolStripMenuItem3_Click);
             // 
             // retirarToolStripMenuItem3
             // 
