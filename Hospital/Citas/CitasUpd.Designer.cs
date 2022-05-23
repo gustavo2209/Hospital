@@ -32,6 +32,8 @@ namespace Hospital.Citas
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CitasUpd));
             this.btnActualizar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboIdCita = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.dtpFechaHoraCitaUpd = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.cboMedicoTUpd = new System.Windows.Forms.ComboBox();
@@ -40,8 +42,6 @@ namespace Hospital.Citas
             this.label2 = new System.Windows.Forms.Label();
             this.cboPacienteCUpd = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cboIdCita = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@ namespace Hospital.Citas
             this.btnActualizar.TabIndex = 7;
             this.btnActualizar.Text = "Actualizar Datos";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // groupBox1
             // 
@@ -76,6 +77,25 @@ namespace Hospital.Citas
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Necesarios:";
+            // 
+            // cboIdCita
+            // 
+            this.cboIdCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboIdCita.FormattingEnabled = true;
+            this.cboIdCita.Location = new System.Drawing.Point(227, 28);
+            this.cboIdCita.Name = "cboIdCita";
+            this.cboIdCita.Size = new System.Drawing.Size(62, 24);
+            this.cboIdCita.TabIndex = 9;
+            this.cboIdCita.SelectionChangeCommitted += new System.EventHandler(this.cboIdCita_SelectionChangeCommitted);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 16);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Código de Cita:";
             // 
             // dtpFechaHoraCitaUpd
             // 
@@ -133,6 +153,7 @@ namespace Hospital.Citas
             // cboPacienteCUpd
             // 
             this.cboPacienteCUpd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPacienteCUpd.Enabled = false;
             this.cboPacienteCUpd.FormattingEnabled = true;
             this.cboPacienteCUpd.Location = new System.Drawing.Point(227, 68);
             this.cboPacienteCUpd.Name = "cboPacienteCUpd";
@@ -147,25 +168,6 @@ namespace Hospital.Citas
             this.label1.Size = new System.Drawing.Size(184, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Apellidos y Nombres de Paciente:";
-            // 
-            // cboIdCita
-            // 
-            this.cboIdCita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboIdCita.FormattingEnabled = true;
-            this.cboIdCita.Location = new System.Drawing.Point(227, 28);
-            this.cboIdCita.Name = "cboIdCita";
-            this.cboIdCita.Size = new System.Drawing.Size(62, 24);
-            this.cboIdCita.TabIndex = 9;
-            this.cboIdCita.SelectionChangeCommitted += new System.EventHandler(this.cboIdCita_SelectionChangeCommitted);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Código de Cita:";
             // 
             // CitasUpd
             // 

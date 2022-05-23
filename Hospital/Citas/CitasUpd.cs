@@ -56,17 +56,12 @@ namespace Hospital.Citas
             cboEspecialidadesCUpd.ValueMember = "idespecialidad";
             cboEspecialidadesCUpd.DisplayMember = "especialidad";
 
-            /*SqlDataAdapter daM = new SqlDataAdapter("SELECT idmedico, nombre FROM medicos", form1.cn);
-            DataSet dsM = new DataSet();
-            daM.Fill(dsM);
-
-            cboMedicoTUpd.DataSource = dsM.Tables[0];
-            cboMedicoTUpd.ValueMember = "idmedico";
-            cboMedicoTUpd.DisplayMember = "nombre";*/
+            dtpFechaHoraCitaUpd.CustomFormat = "dd/MM/yyyy HH:mm:ss";
+            dtpFechaHoraCitaUpd.Format = DateTimePickerFormat.Custom;
+            dtpFechaHoraCitaUpd.ShowUpDown = true;
 
             MostrarDatos();
-            MostrarMedicos(cboEspecialidadesCUpd.SelectedIndex);
-            MessageBox.Show("" + cboEspecialidadesCUpd.SelectedIndex);
+            
         }
 
         private void MostrarDatos()
@@ -77,21 +72,9 @@ namespace Hospital.Citas
                 "P.idpaciente, " +
                 "M.idmedico, " +
                 "E.idespecialidad, " +
-                "FORMAT(C.diahora, 'dd/MM/yyyy hh:mm:ss tt') FROM citas C, pacientes P, medicos M, especialidades E " +
+                "FORMAT(C.diahora, 'dd/MM/yyyy hh:mm:ss tt') AS 'fecha' FROM citas C, pacientes P, medicos M, especialidades E " +
                 "WHERE C.idpaciente = P.idpaciente AND C.idmedico = M.idmedico AND E.idespecialidad = M.idespecialidad " +
                 "AND idcita = " + cboIdCita.SelectedValue, form1.cn);
-
-                /*SqlCommand cm = new SqlCommand();
-                cm.Connection = form1.cn;
-                cm.CommandText = "SELECT C.idcita AS idcita, " +
-                "P.idpaciente, " +
-                "M.idmedico, " +
-                "E.idespecialidad, " +
-                "FORMAT(C.diahora, 'dd/MM/yyyy hh:mm:ss tt') FROM citas C, pacientes P, medicos M, especialidades E " +
-                "WHERE C.idpaciente = P.idpaciente AND C.idmedico = M.idmedico AND E.idespecialidad = M.idespecialidad " +
-                "AND idcita = " + cboIdCita.SelectedValue;
-
-                MessageBox.Show(cm.CommandText);*/
 
                 DataSet ds = new DataSet();
                 da.Fill(ds);
@@ -99,7 +82,9 @@ namespace Hospital.Citas
                 DataRow row = ds.Tables[0].Select().ElementAt(0);
                 cboPacienteCUpd.SelectedValue = Convert.ToInt32(row["idpaciente"].ToString());
                 cboEspecialidadesCUpd.SelectedValue = Convert.ToInt32(row["idespecialidad"].ToString());
+                MostrarMedicos(Convert.ToInt32(cboEspecialidadesCUpd.SelectedValue));
                 cboMedicoTUpd.SelectedValue = Convert.ToInt32(row["idmedico"].ToString());
+                dtpFechaHoraCitaUpd.Value = Convert.ToDateTime(row["fecha"].ToString());
             }
             else
             {
@@ -135,8 +120,42 @@ namespace Hospital.Citas
 
         private void cboEspecialidadesCUpd_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int idespecialidad = cboEspecialidadesCUpd.SelectedIndex;
+            int idespecialidad = Convert.ToInt32(cboEspecialidadesCUpd.SelectedValue);
             MostrarMedicos(idespecialidad);
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("¿Está seguro de actualizar este registro?", "CONFIRMAR ACTUALIZACIÓN", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmResult == DialogResult.Yes)
+            {
+                DateTime dt1 = dtpFechaHoraCitaUpd.Value;
+                string s1 = dt1.Day + "-" + dt1.Month + "-" + dt1.Year + " " + dt1.Hour + ":" + dt1.Minute + ":" + dt1.Second;
+
+                SqlCommand cm = new SqlCommand();
+
+                cm.Connection = form1.cn;
+                cm.CommandText = "set dateformat 'dmy' UPDATE citas SET idmedico = " + cboMedicoTUpd.SelectedValue + ", diahora = '" + s1 + "' WHERE idcita = " + cboIdCita.SelectedValue;
+                //MessageBox.Show(cm.CommandText); //PARA SABER LOS POSIBLES ERRORES AL HACER LA CONSULTA
+                form1.cn.Open();
+                cm.ExecuteNonQuery();
+                form1.cn.Close();
+
+                MessageBox.Show("Datos actualizados correctamente", "MENSAJE DE CONFIRMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                foreach (Form form in Application.OpenForms)
+                {
+                    if (form.GetType() == typeof(CitasQry))
+                    {
+                        ((CitasQry)form).consulta();
+                        form.Activate();
+                        form.BringToFront();
+                    }
+                }
+
+                this.Dispose();
+            }
         }
     }
 }
