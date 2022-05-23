@@ -13,6 +13,7 @@ using Hospital.Pacientes;
 using Hospital.Especialidades;
 using Hospital.Medicos;
 using Hospital.Citas;
+using Hospital.Reportes;
 
 namespace Hospital
 {
@@ -279,6 +280,40 @@ namespace Hospital
 
             citasUpd.MdiParent = this;
             citasUpd.Show();
+        }
+
+        private void citasPorMédicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Reporte01))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Reporte01 reporte01 = new Reporte01(this);
+            reporte01.MdiParent = this;
+            reporte01.Show();
+            reporte01.BringToFront();
+        }
+
+        private void rangoDeFechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.GetType() == typeof(Reporte02))
+                {
+                    form.Activate();
+                    return;
+                }
+            }
+
+            Reporte02 reporte02 = new Reporte02(this);
+            reporte02.MdiParent = this;
+            reporte02.Show();
+            reporte02.BringToFront();
         }
     }
 }

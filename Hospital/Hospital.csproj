@@ -126,6 +126,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\Reporte01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte01.Designer.cs">
+      <DependentUpon>Reporte01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Reporte02.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Reporte02.Designer.cs">
+      <DependentUpon>Reporte02.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Citas\CitasIns.resx">
       <DependentUpon>CitasIns.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +187,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Reporte01.resx">
+      <DependentUpon>Reporte01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Reporte02.resx">
+      <DependentUpon>Reporte02.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
