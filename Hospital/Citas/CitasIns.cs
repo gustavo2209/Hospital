@@ -91,7 +91,7 @@ namespace Hospital.Citas
 
         private void cboEspecialidades_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int idespecialidad = cboEspecialidades.SelectedIndex;
+            int idespecialidad = Convert.ToInt32(cboEspecialidades.SelectedValue.ToString());
             MostrarMedicos(idespecialidad);
         }
 

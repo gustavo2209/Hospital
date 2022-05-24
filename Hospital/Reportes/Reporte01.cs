@@ -71,8 +71,11 @@ namespace Hospital.Reportes
 
         private void cboEspecialidad_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            int idespecialidad = cboEspecialidad.SelectedIndex;
-            MostrarMedicos(idespecialidad);
+            if(cboEspecialidad.SelectedIndex != -1)
+            {
+                int idespecialidad = Convert.ToInt32(cboEspecialidad.SelectedValue.ToString());
+                MostrarMedicos(idespecialidad);
+            }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
